@@ -7,6 +7,8 @@ on:
 
 jobs:
   check-hash:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:

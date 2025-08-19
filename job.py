@@ -59,16 +59,20 @@ if send_email:
     msg_body = f"Taylor Swift site changed!\nPercent difference: {percent_diff:.2f}%\nChecked at {datetime.utcnow()}"
     msg = MIMEText(msg_body)
     msg["From"] = EMAIL_USER
-    msg["To"] = SEND_TO_EMAIL
     msg["Subject"] = EMAIL_SUBJECT
+
+    # Split SEND_TO_EMAIL by spaces into a list
+    recipients = SEND_TO_EMAIL.split()
+    msg["To"] = ", ".join(recipients)  # For email header display
 
     try:
         server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
         server.starttls()
         server.login(EMAIL_USER, EMAIL_PASSWORD)
-        server.sendmail(EMAIL_USER, SEND_TO_EMAIL, msg.as_string())
+        # Send email to all recipients
+        server.sendmail(EMAIL_USER, recipients, msg.as_string())
         server.quit()
-        print(f"[{datetime.utcnow()}] Email sent to {SEND_TO_EMAIL}")
+        print(f"[{datetime.utcnow()}] Email sent to {', '.join(recipients)}")
     except Exception as e:
         print(f"[{datetime.utcnow()}] Failed to send email: {e}")
 

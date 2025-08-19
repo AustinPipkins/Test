@@ -68,7 +68,7 @@ if send_email:
         server.login(EMAIL_USER, EMAIL_PASSWORD)
         server.sendmail(EMAIL_USER, SEND_TO_EMAIL, msg.as_string())
         server.quit()
-        print(f"[{datetime.utcnow()}] Email sent to {EMAIL_TO}")
+        print(f"[{datetime.utcnow()}] Email sent to {SEND_TO_EMAIL}")
     except Exception as e:
         print(f"[{datetime.utcnow()}] Failed to send email: {e}")
 

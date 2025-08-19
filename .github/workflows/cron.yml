@@ -3,7 +3,7 @@ name: Cron Job Example
 on:
   workflow_dispatch:   # allows manual run
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '* * * * *'
 
 jobs:
   run-script:

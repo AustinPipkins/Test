@@ -27,7 +27,7 @@ jobs:
       # Step 4: Run Python script
       - name: Run hash check
         run: |
-          python check_hash.py
+          python job.py
 
       # Step 5: Commit updated hash file if changed
       - name: Commit updated hash.txt

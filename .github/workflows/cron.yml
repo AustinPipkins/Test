@@ -5,6 +5,11 @@ on:
   schedule:
     - cron: "* * * * *"   # runs every minute (UTC)
 
+env:
+  EMAIL_USER: ${{ secrets.EMAIL_USER }}
+  EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+  SEND_TO_EMAIL: ${{ secrets.SEND_TO_EMAIL }}
+
 jobs:
   check-hash:
     permissions:

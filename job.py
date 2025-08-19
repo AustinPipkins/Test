@@ -26,7 +26,7 @@ except requests.RequestException as e:
 # Step 2: Compare with stored HTML
 html_file = "site.html"
 commit_threshold = 1.0  # percent
-email_threshold = 0.0  # percent
+email_threshold = 2.0  # percent
 
 commit_needed = False
 send_email = False

@@ -24,24 +24,14 @@ if not os.path.exists(html_file):
 else:
     # If file exists, compare old and new
     with open(html_file, "r", encoding="utf-8") as f:
-        old_html = f.readlines()
-    
-    new_html = html_content.splitlines(keepends=True)
+        old_html = f.read()
 
-    if old_html == new_html:
-        print(f"[{datetime.utcnow()}] HTML is the same. No changes detected.")
-    else:
-        print(f"[{datetime.utcnow()}] HTML changed! Here's the diff:")
-        diff = difflib.unified_diff(
-            old_html,
-            new_html,
-            fromfile='old_site.html',
-            tofile='new_site.html',
-            lineterm=''
-        )
-        for line in diff:
-            print(line)
+    # Calculate similarity
+    similarity = difflib.SequenceMatcher(None, old_html, html_content).ratio()
+    percent_diff = (1 - similarity) * 100
 
-        # Save the new HTML
-        with open(html_file, "w", encoding="utf-8") as f:
-            f.writelines(new_html)
+    print(f"[{datetime.utcnow()}] HTML percent difference: {percent_diff:.2f}%")
+
+    # Save the new HTML
+    with open(html_file, "w", encoding="utf-8") as f:
+        f.write(html_content)

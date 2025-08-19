@@ -72,7 +72,7 @@ if send_email:
         # Send email to all recipients
         server.sendmail(EMAIL_USER, recipients, msg.as_string())
         server.quit()
-        print(f"[{datetime.utcnow()}] Email sent to {', '.join(recipients)}")
+        print(f"[{datetime.utcnow()}] Emails sent")
     except Exception as e:
         print(f"[{datetime.utcnow()}] Failed to send email: {e}")
 

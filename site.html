@@ -191,7 +191,7 @@ Shopify.routes.root = "/";</script>
 <script>
   window.ShopifyPay = window.ShopifyPay || {};
   window.ShopifyPay.apiHost = "shop.app\/pay";
-  window.ShopifyPay.redirectState = null;
+  window.ShopifyPay.redirectState = "pending";
 </script>
 <script id="shop-js-analytics" type="application/json">{"pageType":"index"}</script>
 <script defer="defer" async type="module" src="//store.taylorswift.com/cdn/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_DN_eQ4h7.en.esm.js"></script>
@@ -229,7 +229,7 @@ await import("//store.taylorswift.com/cdn/shopifycloud/shop-js/modules/v2/chunk.
     window.addEventListener('load', asyncLoad, false);
   }
 })();</script>
-<script id="__st">var __st={"a":1146519637,"offset":-18000,"reqid":"8325509d-38a6-4556-b653-34a8fda52af1-1758918227","pageurl":"store.taylorswift.com\/","u":"98f6206a34a1","p":"home"};</script>
+<script id="__st">var __st={"a":1146519637,"offset":-18000,"reqid":"cc9f284c-55fc-4867-a49b-82f706b3033e-1758921128","pageurl":"store.taylorswift.com\/","u":"0edc03c3a105","p":"home"};</script>
 <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(','),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i='password',u='form_key',d=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',i],f=()=>{try{return window.sessionStorage}catch{return}},m='__shopify_v',_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error('form repopulation failed',{error:o})}}const l='form_type',E='cptcha';function T(t){t.dataset[E]=!0}const w=window,h=w.document,L='Shopify',v='ce_forms',y='captcha';let A=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe',I='https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.2.iife.js',D={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener('submit',(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){_(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type='${i}']`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get('form_key'),M=e.get(l),P=B&&M;t.addEventListener('DOMContentLoaded',(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,['guest_login'])})(!0,!0)}();</script>
 <script integrity="sha256-52AcMU7V7pcBOXWImdc/TAGTFKeNjmkeM1Pvks/DTgc=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//store.taylorswift.com/cdn/shopifycloud/storefront/assets/storefront/load_feature-81c60534.js" crossorigin="anonymous"></script>
@@ -3034,7 +3034,7 @@ text-shadow: none;
         <div class="countdown-timer-bar__block">
           <span class="countdown-timer-bar__number countdown-timer-bar__hours">
             
-              47
+              46
             
           </span>
           <span class="countdown-timer-bar__label body-xxs">
@@ -3055,7 +3055,7 @@ text-shadow: none;
         <div class="countdown-timer-bar__block">
           <span class="countdown-timer-bar__number countdown-timer-bar__minutes">
             
-              36
+              47
             
           </span>
           <span class="countdown-timer-bar__label body-xxs">
@@ -3076,7 +3076,7 @@ text-shadow: none;
         <div class="countdown-timer-bar__block">
           <span class="countdown-timer-bar__number countdown-timer-bar__seconds">
             
-              12
+              52
             
           </span>
           <span class="countdown-timer-bar__label body-xxs">
@@ -4399,27 +4399,6 @@ Available until September 28, 2025 at 3:59pm ET or While Supplies Last</h2>
   
   
 
-  
-  
-  
-  
-
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  
-  
-  
 
 
 
@@ -4437,8 +4416,7 @@ Available until September 28, 2025 at 3:59pm ET or While Supplies Last</h2>
 
 
 
-
-  <script src="//store.taylorswift.com/cdn/shop/t/420/assets/add-all.js?v=47704386661896235971758911854" defer></script> <add-all class="add-all--mobile" data-products-count="4" data-section-id="template--18050946826440__popular_products_UNz76U"> <form action="/cart/add" method="post" section-add-all-form="add-all-form-template--18050946826440__popular_products_UNz76U" accept-charset="UTF-8" class="add-all-form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form" data-variants="44771781443784,44771782721736,44771783082184,44771786031304," > <input type="hidden" name="quantity" value="1" /> <div class="js-form"> <input name="items[0]id" value="44771781443784" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771781443784,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[0]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[0]product_id" value="8241889804488" aria-hidden="true"> <input type="hidden" name="items[0]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[0]component_ref" value="" aria-hidden="true"> <input name="items[1]id" value="44771782721736" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771782721736,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[1]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[1]product_id" value="8241891705032" aria-hidden="true"> <input type="hidden" name="items[1]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[1]component_ref" value="" aria-hidden="true"> <input name="items[2]id" value="44771783082184" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771783082184,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[2]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[2]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[2]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[2]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[2]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[2]product_id" value="8241892294856" aria-hidden="true"> <input type="hidden" name="items[2]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[2]component_ref" value="" aria-hidden="true"> <input name="items[3]id" value="44771786031304" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771786031304,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[3]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[3]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[3]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[3]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[3]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[3]product_id" value="8241892884680" aria-hidden="true"> <input type="hidden" name="items[3]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[3]component_ref" value="" aria-hidden="true"> </div> <span data-has-errors="false" data-unavailable-products="" data-error-message="An item was not added to your cart. Please refer to each product page if the item is limited or unavailable."></span> <button type="submit" class="relative popular-products add-all__btn min-w-max button button--tertiary 4 "> <span class="buybutton_label"> Add All to Cart </span> <div class="loading-overlay__spinner hidden"> <div class="spinner"></div> </div> </button> <aside class="notification notification__error add-all-form__error-message-wrapper product-form__error-message py-sm-xs px-sm-xs mt-sm-2xs md-max-w-lg" hidden> <span class="notification__text" data-notification-text > <span class="add-all-form__error-message"></span> </span> </aside> </form> </add-all>
+  <script src="//store.taylorswift.com/cdn/shop/t/420/assets/add-all.js?v=47704386661896235971758911854" defer></script> <add-all class="add-all--mobile" data-products-count="2" data-section-id="template--18050946826440__popular_products_UNz76U"> <form action="/cart/add" method="post" section-add-all-form="add-all-form-template--18050946826440__popular_products_UNz76U" accept-charset="UTF-8" class="add-all-form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form" data-variants="44771781443784,44771786031304," > <input type="hidden" name="quantity" value="1" /> <div class="js-form"> <input name="items[0]id" value="44771781443784" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771781443784,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[0]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[0]product_id" value="8241889804488" aria-hidden="true"> <input type="hidden" name="items[0]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[0]component_ref" value="" aria-hidden="true"> <input name="items[1]id" value="44771786031304" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771786031304,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[1]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[1]product_id" value="8241892884680" aria-hidden="true"> <input type="hidden" name="items[1]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[1]component_ref" value="" aria-hidden="true"> </div> <span data-has-errors="false" data-unavailable-products="" data-error-message="An item was not added to your cart. Please refer to each product page if the item is limited or unavailable."></span> <button type="submit" class="relative popular-products add-all__btn min-w-max button button--tertiary 2 "> <span class="buybutton_label"> Add All to Cart </span> <div class="loading-overlay__spinner hidden"> <div class="spinner"></div> </div> </button> <aside class="notification notification__error add-all-form__error-message-wrapper product-form__error-message py-sm-xs px-sm-xs mt-sm-2xs md-max-w-lg" hidden> <span class="notification__text" data-notification-text > <span class="add-all-form__error-message"></span> </span> </aside> </form> </add-all>
 
 
           
@@ -4490,27 +4468,6 @@ Available until September 28, 2025 at 3:59pm ET or While Supplies Last</h2>
   
   
 
-  
-  
-  
-  
-
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-
-  
-
-  
-  
-  
 
 
 
@@ -4528,8 +4485,7 @@ Available until September 28, 2025 at 3:59pm ET or While Supplies Last</h2>
 
 
 
-
-  <script src="//store.taylorswift.com/cdn/shop/t/420/assets/add-all.js?v=47704386661896235971758911854" defer></script> <add-all class="add-all--desktop add-all--center" data-products-count="4" data-section-id="template--18050946826440__popular_products_UNz76U"> <form action="/cart/add" method="post" section-add-all-form="add-all-form-template--18050946826440__popular_products_UNz76U" accept-charset="UTF-8" class="add-all-form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form" data-variants="44771781443784,44771782721736,44771783082184,44771786031304," > <input type="hidden" name="quantity" value="1" /> <div class="js-form"> <input name="items[0]id" value="44771781443784" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771781443784,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[0]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[0]product_id" value="8241889804488" aria-hidden="true"> <input type="hidden" name="items[0]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[0]component_ref" value="" aria-hidden="true"> <input name="items[1]id" value="44771782721736" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771782721736,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[1]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[1]product_id" value="8241891705032" aria-hidden="true"> <input type="hidden" name="items[1]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[1]component_ref" value="" aria-hidden="true"> <input name="items[2]id" value="44771783082184" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771783082184,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[2]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[2]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[2]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[2]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[2]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[2]product_id" value="8241892294856" aria-hidden="true"> <input type="hidden" name="items[2]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[2]component_ref" value="" aria-hidden="true"> <input name="items[3]id" value="44771786031304" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771786031304,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[3]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[3]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[3]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[3]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[3]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[3]product_id" value="8241892884680" aria-hidden="true"> <input type="hidden" name="items[3]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[3]component_ref" value="" aria-hidden="true"> </div> <span data-has-errors="false" data-unavailable-products="" data-error-message="An item was not added to your cart. Please refer to each product page if the item is limited or unavailable."></span> <button type="submit" class="relative popular-products add-all__btn min-w-max button button--tertiary add-all__btn--center 4 "> <span class="buybutton_label"> Add All to Cart </span> <div class="loading-overlay__spinner hidden"> <div class="spinner"></div> </div> </button> <aside class="notification notification__error add-all-form__error-message-wrapper product-form__error-message py-sm-xs px-sm-xs mt-sm-2xs md-max-w-lg" hidden> <span class="notification__text" data-notification-text > <span class="add-all-form__error-message"></span> </span> </aside> </form> </add-all>
+  <script src="//store.taylorswift.com/cdn/shop/t/420/assets/add-all.js?v=47704386661896235971758911854" defer></script> <add-all class="add-all--desktop add-all--center" data-products-count="2" data-section-id="template--18050946826440__popular_products_UNz76U"> <form action="/cart/add" method="post" section-add-all-form="add-all-form-template--18050946826440__popular_products_UNz76U" accept-charset="UTF-8" class="add-all-form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form" data-variants="44771781443784,44771786031304," > <input type="hidden" name="quantity" value="1" /> <div class="js-form"> <input name="items[0]id" value="44771781443784" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771781443784,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[0]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[0]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[0]product_id" value="8241889804488" aria-hidden="true"> <input type="hidden" name="items[0]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[0]component_ref" value="" aria-hidden="true"> <input name="items[1]id" value="44771786031304" type="hidden"> <umg-dates hidden data-dates="[{&quot;id&quot;:44771786031304,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]"> <input type="hidden" name="items[1]properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true"> <input type="hidden" name="items[1]properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true"> </umg-dates> <input type="hidden" name="items[1]product_id" value="8241892884680" aria-hidden="true"> <input type="hidden" name="items[1]product_type" value="CD" aria-hidden="true"> <input type="hidden" name="items[1]component_ref" value="" aria-hidden="true"> </div> <span data-has-errors="false" data-unavailable-products="" data-error-message="An item was not added to your cart. Please refer to each product page if the item is limited or unavailable."></span> <button type="submit" class="relative popular-products add-all__btn min-w-max button button--tertiary add-all__btn--center 2 "> <span class="buybutton_label"> Add All to Cart </span> <div class="loading-overlay__spinner hidden"> <div class="spinner"></div> </div> </button> <aside class="notification notification__error add-all-form__error-message-wrapper product-form__error-message py-sm-xs px-sm-xs mt-sm-2xs md-max-w-lg" hidden> <span class="notification__text" data-notification-text > <span class="add-all-form__error-message"></span> </span> </aside> </form> </add-all>
 
 
 </div>
@@ -4861,157 +4817,12 @@ object-fit: contain;">
 
 
             
-
+<span
+                class="badge badge--soldout color-background-1"
+                aria-hidden="true"
+              >Not Available</span>
           </div></div>
-    </div><product-form class="card__add-to-cart card__button ">
-        
-
-<script defer>
-  // Create a namespace for all product variant data
-  window.productVariantData = window.productVariantData || {};
-  // Store data under the product handle to make it unique
-  window.productVariantData['the-life-of-a-showgirl-cd-hand-signed-photo-2'] = {
-    variantData: {
-      
-        '44771782721736': {
-          
-          
-          availability: 
-          
-            true
-          ,
-
-          inventory_policy:
-          
-            'deny'
-          ,
-          
-          purchase_limit: 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            4
-          }
-        
-      
-    },
-    variantOptionsMap: {
-      
-        'Default Title': '44771782721736'
-      
-    }
-  };
-</script>
-
-
-
-<style>
-  /* fix issue with bag disappearing from ATC button on PDP on hover - VIP Theme */
-  .mobile-button--link-wrapper {
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-</style>
-
-<product-form class="product-form" data-hide-errors=""  data-variant-id="" data-has-default-variant="true" data-available="true"  data-product-type="CD"><form method="post" action="/cart/add" id="quick-add-template--18050946826440__popular_products_UNz76U8241891705032" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
-      <input
-        type="hidden"
-        name="id"
-        class="variant-input"
-        value="44771782721736"
-        data-product-handle="the-life-of-a-showgirl-cd-hand-signed-photo-2"
-        
-      >
-    
-<input type="hidden" name="product_id" value="8241891705032" aria-hidden="true">
-    
-    
-      <div class="product-form__buttons">
-        <div class="product-form__buttons-row">
-          
-
-          
-            <span class="hidden umg-product-properties" id="umg-product-properties-template--18050946826440__popular_products_UNz76U">
-              
-              
-              
-                
-                <umg-dates hidden data-dates="[{&quot;id&quot;:44771782721736,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]">
-                  <input type="hidden" name="properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true">
-                  <input type="hidden" name="properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true">
-                  <input type="hidden" name="properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true">
-                  <input type="hidden" name="properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true">
-                  <input type="hidden" name="properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true">
-                </umg-dates>
-              
-
-              
-            </span>
-          
-
-        
-        <div class="product-form__submit-wrapper ">
-          <button
-            type="submit"
-            name="add"
-            class="
-            
-              card__link button
-              button--link
-              mobile-button--primary
-              card__link--static
-              card__link--show
-              card-focused color-background-1
-            "
-            aria-label="Add to cart"
-            
-            
-              
-              disabled
-            
-            style="display: inline-flex !important;"
-          >
-            <div class="loading-overlay__spinner hidden">
-              <div class="spinner"></div>
-            </div>
-            
-
-                  <span>
-                    
-Add to Cart
-                  </span>
-                
-
-          </button>
-        </div>
-      </div>
-
-        
-        <div class="product-form__checkout no-js-hidden"></div>
-
-        
-        
-
-      </div>
-    <div class="product-form__error-message-wrapper" role="alert" hidden>
-      <span class="product-form__error-message py-sm-xs px-sm-xs mt-sm-2xs"></span>
-    </div><input type="hidden" name="product-id" value="8241891705032" /><input type="hidden" name="section-id" value="template--18050946826440__popular_products_UNz76U" /></form>
-
-  
-</product-form>
-      </product-form></div>
+    </div></div>
 
   <div class="card-information">
     <div class="card-information__wrapper"><div class="card__group">
@@ -5020,7 +4831,7 @@ Add to Cart
         
 <div
   class="
-    price "
+    price  price--sold-out "
 >
   <dl><div class="price__regular">
       <dt class="visually-hidden">
@@ -5124,157 +4935,12 @@ object-fit: contain;">
 
 
             
-
+<span
+                class="badge badge--soldout color-background-1"
+                aria-hidden="true"
+              >Not Available</span>
           </div></div>
-    </div><product-form class="card__add-to-cart card__button ">
-        
-
-<script defer>
-  // Create a namespace for all product variant data
-  window.productVariantData = window.productVariantData || {};
-  // Store data under the product handle to make it unique
-  window.productVariantData['the-life-of-a-showgirl-cd-hand-signed-photo-3'] = {
-    variantData: {
-      
-        '44771783082184': {
-          
-          
-          availability: 
-          
-            true
-          ,
-
-          inventory_policy:
-          
-            'deny'
-          ,
-          
-          purchase_limit: 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            4
-          }
-        
-      
-    },
-    variantOptionsMap: {
-      
-        'Default Title': '44771783082184'
-      
-    }
-  };
-</script>
-
-
-
-<style>
-  /* fix issue with bag disappearing from ATC button on PDP on hover - VIP Theme */
-  .mobile-button--link-wrapper {
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-</style>
-
-<product-form class="product-form" data-hide-errors=""  data-variant-id="" data-has-default-variant="true" data-available="true"  data-product-type="CD"><form method="post" action="/cart/add" id="quick-add-template--18050946826440__popular_products_UNz76U8241892294856" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
-      <input
-        type="hidden"
-        name="id"
-        class="variant-input"
-        value="44771783082184"
-        data-product-handle="the-life-of-a-showgirl-cd-hand-signed-photo-3"
-        
-      >
-    
-<input type="hidden" name="product_id" value="8241892294856" aria-hidden="true">
-    
-    
-      <div class="product-form__buttons">
-        <div class="product-form__buttons-row">
-          
-
-          
-            <span class="hidden umg-product-properties" id="umg-product-properties-template--18050946826440__popular_products_UNz76U">
-              
-              
-              
-                
-                <umg-dates hidden data-dates="[{&quot;id&quot;:44771783082184,&quot;title&quot;:&quot;&quot;,&quot;fixed&quot;:&quot;2025-10-03&quot;,&quot;rolling&quot;:&quot;5&quot;}]">
-                  <input type="hidden" name="properties[_shipdate]" value="0" class="promise-msg" aria-hidden="true">
-                  <input type="hidden" name="properties[_date-fixed]" value="0" class="date-fixed" aria-hidden="true">
-                  <input type="hidden" name="properties[_date-fixed-unix]" value="0" class="date-fixed-unix" aria-hidden="true">
-                  <input type="hidden" name="properties[_date-rolling]" value="0" class="date-rolling" aria-hidden="true">
-                  <input type="hidden" name="properties[_date-rolling-unix]" value="0" class="date-rolling-unix" aria-hidden="true">
-                </umg-dates>
-              
-
-              
-            </span>
-          
-
-        
-        <div class="product-form__submit-wrapper ">
-          <button
-            type="submit"
-            name="add"
-            class="
-            
-              card__link button
-              button--link
-              mobile-button--primary
-              card__link--static
-              card__link--show
-              card-focused color-background-1
-            "
-            aria-label="Add to cart"
-            
-            
-              
-              disabled
-            
-            style="display: inline-flex !important;"
-          >
-            <div class="loading-overlay__spinner hidden">
-              <div class="spinner"></div>
-            </div>
-            
-
-                  <span>
-                    
-Add to Cart
-                  </span>
-                
-
-          </button>
-        </div>
-      </div>
-
-        
-        <div class="product-form__checkout no-js-hidden"></div>
-
-        
-        
-
-      </div>
-    <div class="product-form__error-message-wrapper" role="alert" hidden>
-      <span class="product-form__error-message py-sm-xs px-sm-xs mt-sm-2xs"></span>
-    </div><input type="hidden" name="product-id" value="8241892294856" /><input type="hidden" name="section-id" value="template--18050946826440__popular_products_UNz76U" /></form>
-
-  
-</product-form>
-      </product-form></div>
+    </div></div>
 
   <div class="card-information">
     <div class="card-information__wrapper"><div class="card__group">
@@ -5283,7 +4949,7 @@ Add to Cart
         
 <div
   class="
-    price "
+    price  price--sold-out "
 >
   <dl><div class="price__regular">
       <dt class="visually-hidden">
